@@ -131,8 +131,7 @@
 
     T.clear(resultEl).appendChild(h('article', { class: 'tracking' },
       eta,
-      h('div', { class: 'sheet parcel' }, top, timeline, foot),
-      h('p', { class: 'tracking__note' }, T.icon('lock', 14), 'Adresu, e-mail ani celé jméno a telefon příjemce nezobrazujeme.')));
+      h('div', { class: 'sheet parcel' }, top, timeline, foot)));
   }
 
   /* ---------- Odkaz ?kod=… ---------- */

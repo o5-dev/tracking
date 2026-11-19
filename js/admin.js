@@ -39,6 +39,17 @@
   }
   const PUBLISH_NOTE = ' Na webu se změna projeví zhruba za minutu (GitHub Pages ji nejdřív nasadí).';
   function trackingLink(code) { return new URL('../?kod=' + encodeURIComponent(code), location.href).href; }
+  // Text zprávy pro zákazníka (kopíruje se do schránky a posílá se např. e-mailem nebo SMS)
+  function customerMessage(p) {
+    return [
+      'Dobrý den,',
+      '',
+      'Vaše zásilka' + (p.description ? ' (' + p.description + ')' : '') + ' je zaregistrována. Její stav můžete sledovat zde:',
+      trackingLink(p.tracking_code),
+      '',
+      'Sledovací kód: ' + p.tracking_code
+    ].join('\n');
+  }
   function selected() { return state.packages.find(function (p) { return p.id === state.selectedId; }) || null; }
   function emptyToNull(o) {
     const out = {};
@@ -62,6 +73,17 @@
     b.addEventListener('click', async function () {
       const ok = await T.copyText(text);
       T.clear(b).append(T.icon(ok ? 'check' : 'copy', 16), ok ? doneLabel : label);
+      setTimeout(function () { T.clear(b).append(T.icon('copy', 16), label); }, 1800);
+    });
+    return b;
+  }
+
+  function messageButton(p) {
+    const label = 'Kopírovat zprávu pro zákazníka';
+    const b = h('button', { class: 'btn btn--sm', type: 'button', title: 'Zkopíruje text s odkazem na sledování' }, T.icon('copy', 16), label);
+    b.addEventListener('click', async function () {
+      const ok = await T.copyText(customerMessage(p));
+      T.clear(b).append(T.icon(ok ? 'check' : 'copy', 16), ok ? 'Zpráva zkopírována' : label);
       setTimeout(function () { T.clear(b).append(T.icon('copy', 16), label); }, 1800);
     });
     return b;
@@ -255,7 +277,7 @@
       parts.push(h('div', { class: 'created-banner' },
         h('strong', null, 'Zásilka je vytvořená. Pošlete příjemci tento sledovací kód:'),
         h('div', { class: 'codebox__row' }, h('span', { class: 'codebox__code' }, p.tracking_code), copyButton(p.tracking_code, 'Kopírovat kód', 'Zkopírováno')),
-        h('div', { class: 'btn-row' }, copyButton(link, 'Kopírovat odkaz pro sledování', 'Odkaz zkopírován')),
+        h('div', { class: 'btn-row' }, messageButton(p), copyButton(link, 'Kopírovat jen odkaz', 'Odkaz zkopírován')),
         T.isDemo ? null : h('div', { style: 'font-size:.875rem' }, 'Kód začne na webu fungovat zhruba za minutu (GitHub Pages změnu nejdřív nasadí).')));
     }
     parts.push(h('div', { class: 'pane-title' },
@@ -264,7 +286,7 @@
         h('div', { class: 'pane-title__code' }, h('span', { class: 'codebox__code' }, p.tracking_code),
           copyButton(p.tracking_code, 'Kopírovat', 'Zkopírováno'), copyButton(link, 'Odkaz', 'Odkaz zkopírován'))),
       h('div', { class: 'btn-row' }, T.statusChip(p.status))));
-    parts.push(h('div', { class: 'btn-row', style: 'margin-top:16px' }, editBtn, delBtn));
+    parts.push(h('div', { class: 'btn-row', style: 'margin-top:16px' }, messageButton(p), editBtn, delBtn));
 
     if (state.confirmDelete) {
       const yes = h('button', { class: 'btn btn--danger-solid btn--sm', type: 'button' }, 'Smazat navždy');

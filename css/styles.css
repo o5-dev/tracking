@@ -216,8 +216,6 @@ input, textarea, select { caret-color: var(--accent); }
 .parcel__foot svg { color: var(--ink-3); flex: none; }
 .parcel__foot b { font-weight: 560; color: var(--ink); }
 .parcel__foot .masked { font-family: var(--mono); letter-spacing: 0.06em; font-size: 0.875rem; }
-.tracking__note { display: flex; gap: 8px; padding: 0 4px; color: var(--ink-3); font-size: 0.8125rem; }
-.tracking__note svg { flex: none; margin-top: 2px; }
 
 
 .demo-banner { background: var(--warning-soft); color: var(--warning-ink); font-size: 0.875rem; text-align: center; padding: 8px 16px; }
