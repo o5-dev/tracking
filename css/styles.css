@@ -154,8 +154,6 @@ input, textarea, select { caret-color: var(--accent); }
 .track__help code { font-family: var(--mono); color: var(--ink-2); }
 .track__help button { all: unset; cursor: pointer; font-family: var(--mono); color: var(--link); text-decoration: underline; text-underline-offset: 0.2em; }
 .track__help button:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
-.privacy-note { display: flex; gap: 8px; align-items: flex-start; font-size: 0.8125rem; color: var(--ink-3); }
-.privacy-note svg { flex: none; margin-top: 2px; }
 
 .topbar { background: var(--surface); border-bottom: 1px solid var(--line); }
 .topbar__in { width: min(1280px, 100% - 32px); margin-inline: auto; min-height: 56px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }

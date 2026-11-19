@@ -21,12 +21,11 @@
       <div class="lookup__row">
         <input class="track__input" id="code" name="code" type="text" inputmode="text"
                placeholder="XXXX-XXXX-XXXX" maxlength="14" spellcheck="false"
-               autocapitalize="characters" autocorrect="off" aria-describedby="code-help code-error">
+               autocapitalize="characters" autocorrect="off" aria-describedby="code-error">
         <button class="btn track__btn" id="track-btn" type="submit">Sledovat</button>
       </div>
       <div id="code-error" class="track__error" aria-live="polite"></div>
-      <p class="track__help" id="code-help">Kód má 12 znaků, například <code>7K2M-9QXD-4HNP</code></p>
-      <p class="privacy-note" id="privacy-note"></p>
+      <p class="track__help" id="code-help" hidden></p>
     </form>
 
     <section id="result" aria-live="polite" tabindex="-1"></section>

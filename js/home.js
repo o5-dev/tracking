@@ -13,13 +13,9 @@
 
   /* ---------- Úvodní nastavení ---------- */
 
-  document.getElementById('privacy-note').append(
-    T.icon('lock', 16),
-    'Ke každé zásilce ukážeme jen její stav a trasu. Adresa ani kontakt na příjemce se nezobrazují.'
-  );
-
   if (T.isDemo) {
     document.getElementById('demo-banner').hidden = false;
+    help.hidden = false;
     help.textContent = 'Vyzkoušejte ukázkovou zásilku: ';
     help.appendChild(h('button', { type: 'button', onclick: function () { input.value = 'DEMO-BALI-K123'; submit(); } }, 'DEMO-BALI-K123'));
   }
