@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sledování zásilek</title>
+  <meta name="description" content="Zadejte sledovací kód a zjistěte, kde se vaše zásilka právě nachází.">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="demo-banner" class="demo-banner" hidden>
+    Demo režim – data se ukládají jen v tomto prohlížeči. Pro ostrý provoz vyplňte <code>js/config.js</code>.
+  </div>
+
+  <main class="page">
+    <h1 class="page__title">Sledování zásilky</h1>
+
+    <form class="sheet lookup" id="track-form" novalidate autocomplete="off">
+      <label for="code">Sledovací kód</label>
+      <div class="lookup__row">
+        <input class="track__input" id="code" name="code" type="text" inputmode="text"
+               placeholder="XXXX-XXXX-XXXX" maxlength="14" spellcheck="false"
+               autocapitalize="characters" autocorrect="off" aria-describedby="code-help code-error">
+        <button class="btn track__btn" id="track-btn" type="submit">Sledovat</button>
+      </div>
+      <div id="code-error" class="track__error" aria-live="polite"></div>
+      <p class="track__help" id="code-help">Kód má 12 znaků, například <code>7K2M-9QXD-4HNP</code></p>
+      <p class="privacy-note" id="privacy-note"></p>
+    </form>
+
+    <section id="result" aria-live="polite" tabindex="-1"></section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__in">
+      <span></span>
+      <a href="admin/">Správa zásilek</a>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
