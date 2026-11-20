@@ -1,6 +1,6 @@
 {
   "tracking_code": "Q2JE-ANHH-YWGM",
-  "status": "at_airport",
+  "status": "awaiting_flight",
   "recipient": "V***** M*****",
   "recipient_phone": "*** *** 719",
   "description": "Nabíječka",
@@ -10,8 +10,14 @@
   "estimated_delivery": "2026-11-20",
   "estimated_delivery_to": "2026-11-23",
   "created_at": "2026-11-19T19:09:47.165Z",
-  "updated_at": "2026-11-20T15:41:12.041Z",
+  "updated_at": "2026-11-20T22:33:32.489Z",
   "events": [
+    {
+      "status": "awaiting_flight",
+      "location": null,
+      "note": null,
+      "at": "2026-11-20T22:33:32.489Z"
+    },
     {
       "status": "at_airport",
       "location": "Letiště Václava Havla, Praha",
