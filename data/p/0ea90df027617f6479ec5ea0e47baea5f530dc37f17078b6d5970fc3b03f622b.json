@@ -1,6 +1,6 @@
 {
   "tracking_code": "FCM5-ZHTH-8DBP",
-  "status": "to_local_carrier",
+  "status": "local_facility",
   "recipient": "j**",
   "recipient_phone": null,
   "description": "jj",
@@ -10,8 +10,14 @@
   "estimated_delivery": null,
   "estimated_delivery_to": null,
   "created_at": "2026-11-20T22:36:40.928Z",
-  "updated_at": "2026-11-20T22:39:15.187Z",
+  "updated_at": "2026-11-20T22:39:23.665Z",
   "events": [
+    {
+      "status": "local_facility",
+      "location": null,
+      "note": null,
+      "at": "2026-11-20T22:39:23.665Z"
+    },
     {
       "status": "to_local_carrier",
       "location": null,
