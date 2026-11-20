@@ -1,6 +1,6 @@
 {
   "tracking_code": "FCM5-ZHTH-8DBP",
-  "status": "landed",
+  "status": "customs_arrived",
   "recipient": "j**",
   "recipient_phone": null,
   "description": "jj",
@@ -10,8 +10,14 @@
   "estimated_delivery": null,
   "estimated_delivery_to": null,
   "created_at": "2026-11-20T22:36:40.928Z",
-  "updated_at": "2026-11-20T22:37:33.828Z",
+  "updated_at": "2026-11-20T22:38:25.821Z",
   "events": [
+    {
+      "status": "customs_arrived",
+      "location": null,
+      "note": null,
+      "at": "2026-11-20T22:38:25.821Z"
+    },
     {
       "status": "landed",
       "location": null,
