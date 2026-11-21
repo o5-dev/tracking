@@ -1,6 +1,6 @@
 {
   "tracking_code": "Q2JE-ANHH-YWGM",
-  "status": "departed_origin",
+  "status": "landed",
   "recipient": "V***** M*****",
   "recipient_phone": "*** *** 719",
   "description": "Nabíječka",
@@ -10,8 +10,14 @@
   "estimated_delivery": "2026-11-20",
   "estimated_delivery_to": "2026-11-23",
   "created_at": "2026-11-19T19:09:47.165Z",
-  "updated_at": "2026-11-21T17:18:34.238Z",
+  "updated_at": "2026-11-21T17:49:21.741Z",
   "events": [
+    {
+      "status": "landed",
+      "location": "Mezinárodní letiště Vnukovo, Rusko",
+      "note": null,
+      "at": "2026-11-21T17:49:21.741Z"
+    },
     {
       "status": "departed_origin",
       "location": null,
