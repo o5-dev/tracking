@@ -1,6 +1,6 @@
 {
   "tracking_code": "Q2JE-ANHH-YWGM",
-  "status": "landed",
+  "status": "import_customs",
   "recipient": "V***** M*****",
   "recipient_phone": "*** *** 719",
   "description": "Nabíječka",
@@ -10,8 +10,14 @@
   "estimated_delivery": "2026-11-20",
   "estimated_delivery_to": "2026-11-23",
   "created_at": "2026-11-19T19:09:47.165Z",
-  "updated_at": "2026-11-23T20:12:22.457Z",
+  "updated_at": "2026-11-23T20:13:03.451Z",
   "events": [
+    {
+      "status": "import_customs",
+      "location": null,
+      "note": null,
+      "at": "2026-11-23T20:13:03.451Z"
+    },
     {
       "status": "landed",
       "location": "Letiště Pardubice, Česká Republika",
