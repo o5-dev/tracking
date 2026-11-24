@@ -1,6 +1,6 @@
 {
   "tracking_code": "Q2JE-ANHH-YWGM",
-  "status": "to_local_carrier",
+  "status": "at_depot",
   "recipient": "V***** M*****",
   "recipient_phone": "*** *** 719",
   "description": "Nabíječka",
@@ -10,8 +10,14 @@
   "estimated_delivery": "2026-11-20",
   "estimated_delivery_to": "2026-11-23",
   "created_at": "2026-11-19T19:09:47.165Z",
-  "updated_at": "2026-11-24T07:56:21.592Z",
+  "updated_at": "2026-11-24T08:06:27.275Z",
   "events": [
+    {
+      "status": "at_depot",
+      "location": "Pardubice",
+      "note": null,
+      "at": "2026-11-24T08:06:27.275Z"
+    },
     {
       "status": "to_local_carrier",
       "location": null,
